@@ -23,6 +23,7 @@ const { data } = await useFetch('/api/hello')
   }) */
 
   /* Try it and look at the computed below in VSCode
+    - pick([]) and transform() are super useful to limit the payload in window.__NUXT__
 
 */
 
