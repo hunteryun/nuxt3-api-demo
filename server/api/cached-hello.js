@@ -3,7 +3,7 @@
 */
 
 export default defineCachedEventHandler(async () => {
-  /* On simule un délai de réponse */
+  /* Emulate a response delay */
   await new Promise(resolve => setTimeout(resolve, 1000))
   return {
     status: 200,

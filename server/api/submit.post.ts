@@ -4,11 +4,11 @@ import { createStorage } from 'unstorage'
 import fsDriver from 'unstorage/drivers/fs'
 import memoryDriver from 'unstorage/drivers/memory'
 
-/* Pour info, voilà comment on créé un driver, assez facile : https://github.com/unjs/unstorage/blob/main/src/drivers/memory.ts */
+/* FYI, this is how to create a driver. Pretty straightforward : https://github.com/unjs/unstorage/blob/main/src/drivers/memory.ts */
 
-/* Choisir le type de storage en fonction d'une variable d'env */
+/* Select storage type depending on env: */
 const getStorageDriver = () => {
-  /* env est déclaré dans le nuxt.config, mais il pourrait venir d'un fichier .env
+  /* env is declared in the nuxt.config file, but could be provided by a .env file as well. See:
      https://v3.nuxtjs.org/guide/features/runtime-config
   */
   const { env } = useRuntimeConfig()
@@ -28,7 +28,7 @@ const storage = createStorage({
 })
 
 export default defineEventHandler(async (req) => {
-  /* Nuxt 3 utilise h3 comme serveur HTTP, avec l'auto-import de ses fonctions
+  /* Nuxt 3 uses h3 as its HTTP server, with its function being auto-imported
     https://github.com/unjs/h3
     https://www.jsdocs.io/package/h3
   */
@@ -37,10 +37,6 @@ export default defineEventHandler(async (req) => {
   await storage.setItem('my-value', value.inputValue)
 
   const myValue = await storage.getItem('my-value')
-
-  /*
-  console.log(myValue)
-  */
 
   return {
     status: 201,
