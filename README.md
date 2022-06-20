@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 API Demo
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+This is a demo of Nuxt 3 server capabilities. This repo is only used to quickly demonstrate features and prepare examples.
 
 ## Setup
 
