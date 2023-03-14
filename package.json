@@ -7,7 +7,7 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.3",
-    "unstorage": "^0.5.0"
+    "nuxt": "3.2.3",
+    "unstorage": "^1.4.0"
   }
 }
